@@ -1,32 +1,36 @@
 import { Injectable } from '@angular/core';
-import { Question } from '../models/Question';
+import { Question } from '../models/question-model';
 
 @Injectable()
 export class DataService {
-  questions:Question[];
+  questions: Question[];
 
   constructor() { 
     this.questions = [
       {
-        text:'What is your name?',
-        answer: 'My name is Brad',
+        text: 'What is your name?',
+        answer: 'My name is Nikola',
         hide: true
       },
       {
-        text:'What is your favorite color?',
-        answer: 'My favorite color is red',
-        hide:true
+        text: 'What is your favorite color?',
+        answer: 'My favorite color is blue',
+        hide: true
       },
       {
-        text:'What is your favorite language?',
+        text: 'What is your favorite language?',
         answer: 'My favorite language is JavaScript',
-        hide:true
+        hide: true
       }
     ];
   }
 
-  getQuestions(){
+  getQuestions() {
     return this.questions;
+  }
+
+  addQuestion(question: Question) {
+    this.questions.push(question);
   }
 
 }
