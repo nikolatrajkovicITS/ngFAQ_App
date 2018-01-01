@@ -15,4 +15,7 @@ export class QuestionComponent implements OnInit {
   ngOnInit() {
   }
 
+  removeQuestion(question) {
+    this.dataService.removeQuestion(question);
+  }
 }
